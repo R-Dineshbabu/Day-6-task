@@ -42,7 +42,7 @@ class Movie {
       this.address = address;
     }
   
-    getDetails() {
+    getDetails () {
       return `Name: ${this.name}, Age: ${this.age}, Address: ${this.address}`;
     }
   }
@@ -73,9 +73,9 @@ class Movie {
   
   const calculator = new UberPriceCalculator(2.0, 1.5, 0.2);
   
-  const distance = 5;
-  const duration = 15;
-  const fare = calculator.calculateFare(distance, duration);
+  // const distance = 5;
+  // const duration = 15;
+  const fare = calculator.calculateFare(5, 15);
   
   console.log(`Uber Fare: Rs.${fare.toFixed(2)}`);
   
