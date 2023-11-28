@@ -54,29 +54,17 @@ class Movie {
   console.log(person2.getDetails());
 
   //4.write a class to calculate the uber price.
-  class UberPriceCalculator {
-    constructor(baseFare, costPerKilometer, costPerMinute) {
-      this.baseFare = baseFare; 
-      this.costPerKilometer = costPerKilometer; 
-      this.costPerMinute = costPerMinute; 
+  class ubercost{
+    constructor(kilometers,price){
+    this.kilometers=kilometers;
+    this.price=price;
     }
-  
-    calculateFare(distanceInKilometers, durationInMinutes) {
+    get cost(){
       
-      const fare = this.baseFare +
-        (distanceInKilometers * this.costPerKilometer) +
-        (durationInMinutes * this.costPerMinute);
-  
-      return fare;
+      return this.kilometers*this.price;
+      } 
+    
     }
-  }
-  
-  const calculator = new UberPriceCalculator(2.0, 1.5, 0.2);
-  
-  // const distance = 5;
-  // const duration = 15;
-  const fare = calculator.calculateFare(5, 15);
-  
-  console.log(`Uber Fare: Rs.${fare.toFixed(2)}`);
-  
+    let uber1=new ubercost(8,20.5);
+    console.log("Uber fare RS:"+uber1.cost.toFixed(2));
   
